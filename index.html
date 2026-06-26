@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insider Reports &mdash; Real</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500&display=swap');
+
+  :root {
+    --bg: #0B0B0E;
+    --panel: #131318;
+    --line: #232328;
+    --pink: #E00067;
+    --text: #ECECEF;
+    --muted: #9A9AA4;
+    --body: #C7C7CC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Serif 4', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .chrome {
+    border-bottom: 1px solid var(--line);
+    background: var(--panel);
+  }
+
+  .chrome-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  .live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--pink);
+    box-shadow: 0 0 0 0 rgba(224,0,103,0.6);
+    animation: pulse 1.8s infinite;
+  }
+
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(224,0,103,0.55); }
+    70%  { box-shadow: 0 0 0 7px rgba(224,0,103,0); }
+    100% { box-shadow: 0 0 0 0 rgba(224,0,103,0); }
+  }
+
+  .tabs {
+    display: flex;
+    gap: 22px;
+    padding: 0 20px 14px;
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .tabs span { color: #5A5A62; white-space: nowrap; }
+  .tabs span.active { color: var(--pink); position: relative; }
+  .tabs span.active::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -14px;
+    height: 2px;
+    background: var(--pink);
+  }
+
+  .masthead {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 40px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--pink);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-family: 'Archivo Expanded', sans-serif;
+    font-weight: 800;
+    font-size: clamp(34px, 6vw, 50px);
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+
+  .sub {
+    margin-top: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    max-width: 50ch;
+    line-height: 1.6;
+  }
+
+  .feed {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 10px 24px 100px;
+  }
+
+  .post-card {
+    display: block;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--line);
+    transition: opacity 0.15s ease;
+  }
+
+  .post-card:hover { opacity: 0.82; }
+  .post-card:last-child { border-bottom: none; }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .post-meta .pink { color: var(--pink); }
+
+  .post-title {
+    font-family: 'Archivo Expanded', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .post-excerpt {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--body);
+    max-width: 62ch;
+  }
+
+  .post-arrow {
+    display: inline-block;
+    margin-top: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--pink);
+  }
+
+  .empty-note {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    padding: 40px 0;
+  }
+
+  @media (max-width: 600px) {
+    .masthead { padding: 40px 20px 30px; }
+    .feed { padding: 6px 20px 80px; }
+    .post-title { font-size: 21px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="chrome">
+    <div class="chrome-top">
+      <span class="live-dot"></span>
+      <span>INSIDER REPORTS &middot; REAL</span>
+    </div>
+    <div class="tabs">
+      <span class="active">ALL</span>
+      <span>NHL</span>
+      <span>MLB</span>
+      <span>NBA</span>
+      <span>NFL</span>
+      <span>FC</span>
+    </div>
+  </div>
+
+  <div class="masthead">
+    <div class="eyebrow">32 Thoughts, Real Edition</div>
+    <h1>Insider Reports</h1>
+    <div class="sub">
+      Scoops, reads, and predictions on Real &mdash; written the way the trade desk does it. Not official. Just paying attention.
+    </div>
+  </div>
+
+  <div class="feed">
+
+    <a class="post-card" href="posts/where-real-goes-next.html">
+      <div class="post-meta">
+        <span class="pink">&#9679; LIVE</span>
+        <span>&middot;</span>
+        <span>Platform</span>
+      </div>
+      <div class="post-title">Where Real Goes Next</div>
+      <div class="post-excerpt">
+        Tennis is the obvious gap, the marketplace keeps getting sharper, and predictions are still just getting started. Reading the pattern of what's shipped against what people keep asking for.
+      </div>
+      <div class="post-arrow">Read the report &rarr;</div>
+    </a>
+
+    <!--
+      ADD NEW POSTS HERE.
+      Copy the <a class="post-card">...</a> block above, change the href
+      to your new file's path inside /posts, and update the title/excerpt.
+      Newest post should go at the top.
+    -->
+
+  </div>
+
+</body>
+</html>
