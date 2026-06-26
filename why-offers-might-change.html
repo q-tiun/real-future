@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Offer Problem</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500&display=swap');
+
+  :root {
+    --bg: #FFFFFF;
+    --panel: #FAFAFA;
+    --line: #E3E3E3;
+    --pink: #E00067;
+    --text: #111113;
+    --muted: #7A7A82;
+    --body: #3A3A40;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+
+  .chrome { border-bottom: 1px solid var(--line); background: var(--panel); }
+
+  .chrome-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--pink);
+  }
+
+  .tabs { padding: 0 20px 14px; }
+  .tabs span {
+    color: var(--pink);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+  }
+
+  .masthead { max-width: 720px; margin: 0 auto; padding: 56px 24px 36px; }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--pink);
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: 'Archivo Expanded', sans-serif;
+    font-weight: 800;
+    font-size: clamp(34px, 6vw, 54px);
+    line-height: 1.04;
+  }
+
+  .article { max-width: 720px; margin: 0 auto; padding: 0 24px 100px; }
+
+  .lede {
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--body);
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 40px;
+  }
+
+  .thought { padding: 34px 0; border-bottom: 1px solid var(--line); }
+
+  .thought-head {
+    font-family: 'Archivo Expanded', sans-serif;
+    font-size: 21px;
+    margin-bottom: 14px;
+  }
+
+  .thought p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--body);
+    margin-top: 14px;
+  }
+
+  .tag-row { margin-top: 18px; display: flex; gap: 8px; }
+
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 5px 11px;
+  }
+
+  .sign-off {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--line);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+</style>
+</head>
+<body>
+
+<div class="chrome">
+  <div class="chrome-top">
+    <span class="live-dot"></span>
+    <span>INSIDER REPORT · REAL</span>
+  </div>
+  <div class="tabs"><span>ALL</span></div>
+</div>
+
+<div class="masthead">
+  <div class="eyebrow">An Insider’s Take</div>
+  <h1>The Offer Problem</h1>
+</div>
+
+<div class="article">
+
+  <div class="lede">
+    Been paying attention to the conversation around offers lately, and there’s clearly more going on than just users complaining about botters.
+  </div>
+
+  <div class="thought">
+    <div class="thought-head">— Botting is still a real issue</div>
+    <p>
+      A lot of users keep asking the same thing: why doesn’t Real just ban botters?
+    </p>
+    <p>
+      The issue is that it’s not always easy to tell the difference between automation and someone who’s just chronically online sending hundreds of offers a day.
+    </p>
+    <p>
+      Even when accounts get banned, alt accounts can replace them quickly, making enforcement harder than people think.
+    </p>
+    <div class="tag-row">
+      <span class="tag">Botting</span>
+      <span class="tag">Ongoing Issue</span>
+    </div>
+  </div>
+
+  <div class="thought">
+    <div class="thought-head">— Offer spam became the meta, and that’s the real problem</div>
+    <p>
+      Botting is still a real issue, and a lot of users are frustrated by how much it affects the marketplace.
+    </p>
+    <p>
+      But based on dev comments, the deeper problem goes beyond just bots.
+    </p>
+    <p>
+      The bigger issue is that users feel like they need to spam offers. If the most effective strategy is sending hundreds of offers and hoping one gets accepted, that points to friction somewhere in the system — whether it’s pricing, listing visibility, or how offers are handled.
+    </p>
+    <p>
+      The devs have said they’re working on changes to make offers less necessary. If those updates land, the goal won’t just be reducing botting — it’ll be making offer spam a weaker strategy in the first place.
+    </p>
+    <div class="tag-row">
+      <span class="tag">Offer System</span>
+      <span class="tag">Needs Changes</span>
+    </div>
+  </div>
+
+  <div class="sign-off">
+    Just connecting the dots between user complaints, dev comments, and where the marketplace could be headed next.<br>
+    This feels like one worth watching.
+  </div>
+
+</div>
+</body>
+</html>
