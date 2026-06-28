@@ -98,6 +98,14 @@
   .thought p { font-size: 17px; line-height: 1.7; color: var(--body); }
   .thought p + p { margin-top: 14px; }
 
+  .tag-row { margin-top: 18px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag {
+    font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+    text-transform: uppercase; color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 100px; padding: 5px 11px;
+  }
+
   .sign-off {
     margin-top: 46px; padding-top: 28px; border-top: 1px solid var(--line);
     font-size: 17px; line-height: 1.7; color: var(--body);
@@ -133,6 +141,10 @@
       <p>
         Earnings will show based on a pass's exact level (Iconic 1, etc.) instead of estimating across player passes, team cards, and UFC cards.
       </p>
+      <div class="tag-row">
+        <span class="tag">Earnings</span>
+        <span class="tag">Mobile</span>
+      </div>
     </div>
 
     <div class="thought">
@@ -140,6 +152,10 @@
       <p>
         A calendar view for predictions to see which days you finished positive or negative, click into specific days, set custom ranges to spot streaks.
       </p>
+      <div class="tag-row">
+        <span class="tag">Predictions</span>
+        <span class="tag">New Feature</span>
+      </div>
     </div>
 
     <div class="thought">
@@ -147,6 +163,10 @@
       <p>
         A separate on-this-day calendar is also landing, it'll show how much you've earned for each day of the month, similar in style to the prediction calendar.
       </p>
+      <div class="tag-row">
+        <span class="tag">OTD</span>
+        <span class="tag">New Feature</span>
+      </div>
     </div>
 
     <div class="thought">
@@ -154,6 +174,10 @@
       <p>
         Separately, a user pitched better fantasy football tools to plug in your team, get recommended pickups and roster suggestions. A dev called it high priority, but this isn't part of this week's update. It's on the roadmap for later.
       </p>
+      <div class="tag-row">
+        <span class="tag">Fantasy</span>
+        <span class="tag">On Roadmap</span>
+      </div>
     </div>
 
     <div class="sign-off">
