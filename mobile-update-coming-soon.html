@@ -1,158 +1,287 @@
-<div class="masthead">
-  <div class="eyebrow">An Insider's Take</div>
-  <h1>Mobile Update Coming Soon</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Update Coming Soon &mdash; Insider Reports</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500&display=swap');
+
+  :root {
+    --bg: #FFFFFF;
+    --panel: #FAFAFA;
+    --line: #E3E3E3;
+    --pink: #E00067;
+    --text: #111113;
+    --muted: #7A7A82;
+    --body: #3A3A40;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Serif 4', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .chrome {
+    border-bottom: 1px solid var(--line);
+    background: var(--panel);
+  }
+
+  .chrome-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  .live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--pink);
+    box-shadow: 0 0 0 0 rgba(224,0,103,0.6);
+    animation: pulse 1.8s infinite;
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(224,0,103,0.45); }
+    70% { box-shadow: 0 0 0 7px rgba(224,0,103,0); }
+    100% { box-shadow: 0 0 0 0 rgba(224,0,103,0); }
+  }
+
+  .tabs {
+    padding: 0 20px 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .tabs a {
+    color: var(--pink);
+  }
+
+  .article {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 100px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--pink);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-family: 'Archivo Expanded', sans-serif;
+    font-weight: 800;
+    font-size: clamp(34px, 6vw, 50px);
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+  }
+
+  .lede {
+    margin-top: 30px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid var(--line);
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--body);
+  }
+
+  .thought {
+    padding: 38px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .thought h2 {
+    font-family: 'Archivo Expanded', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+  }
+
+  .thought p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--body);
+    margin-bottom: 18px;
+  }
+
+  .thought p:last-child {
+    margin-bottom: 0;
+  }
+
+  .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .tag {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 5px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  .back {
+    display: inline-block;
+    margin-top: 30px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--pink);
+  }
+</style>
+</head>
+<body>
+
+<div class="chrome">
+  <div class="chrome-top">
+    <span class="live-dot"></span>
+    <span>INSIDER REPORT &middot; REAL</span>
+  </div>
+  <div class="tabs">
+    <a href="index.html">ALL</a>
+  </div>
 </div>
 
-<article class="article">
+<main class="article">
+
+  <div class="eyebrow">An Insider&rsquo;s Take</div>
+
+  <h1>Mobile Update Coming Soon</h1>
 
   <div class="lede">
-    Over the past few days, developers have quietly teased several features planned for the next mobile update. While none of these changes completely overhaul the app, together they point toward one goal: bringing many of the web experience's best features to mobile while improving everyday usability.
+    Over the past few days, developers have quietly teased several features planned for the next mobile update. While none of these changes completely overhaul the app, together they point toward one goal: bringing many of the web experience&rsquo;s best features to mobile while improving everyday usability.
   </div>
 
   <section class="thought">
-    <h2 class="thought-head">Notification Controls Are Finally Improving</h2>
-
+    <h2>Notification Controls Are Finally Improving</h2>
     <p>
-      One of the most requested quality-of-life improvements is finally arriving.
-      Developers confirmed that the next update will include a toggle allowing users
-      to disable the automatic Team Pass and Player Pass notifications that currently
-      turn themselves back on. For users constantly clearing unwanted alerts, this
-      should make the mobile experience far less frustrating.
+      One of the most requested quality-of-life improvements is finally arriving. Developers confirmed that the next update will include a toggle allowing users to disable the automatic Team Pass and Player Pass notifications that currently turn themselves back on.
     </p>
-
-    <div class="tag-row">
+    <p>
+      For users constantly clearing unwanted alerts, this should make the mobile experience far less frustrating.
+    </p>
+    <div class="tags">
       <span class="tag">Notifications</span>
       <span class="tag">Mobile</span>
     </div>
   </section>
 
   <section class="thought">
-    <h2 class="thought-head">A New Card Feature Will Replace the Map</h2>
-
+    <h2>A New Card Feature Will Replace the Map</h2>
     <p>
-      Perhaps the biggest teaser wasn't about the interface at all.
-      A developer revealed that a brand-new feature centered around playing with cards
-      is currently in development and will eventually replace the existing map.
-      According to the team, the map was the very first attempt at creating a fun,
-      competitive card experience, but this upcoming feature is expected to take its place.
+      Perhaps the biggest teaser wasn&rsquo;t about the interface at all. A developer revealed that a brand-new feature centered around playing with cards is currently in development and will eventually replace the existing map.
     </p>
-
     <p>
-      No additional details have been shared yet, making this one of the biggest
-      mysteries heading into future updates.
+      According to the team, the map was the very first attempt at creating a fun, competitive card experience, but this upcoming feature is expected to take its place. No additional details have been shared yet, making this one of the biggest mysteries heading into future updates.
     </p>
-
-    <div class="tag-row">
+    <div class="tags">
       <span class="tag">Cards</span>
       <span class="tag">Map</span>
     </div>
   </section>
 
   <section class="thought">
-    <h2 class="thought-head">Tennis Continues to Move Closer</h2>
-
+    <h2>Tennis Continues to Move Closer</h2>
     <p>
-      Another mini teaser focused on tennis.
-      Developers shared that the tennis interface is coming together nicely,
-      with one team member saying the UI is going to be "sick."
-      While there still isn't an official launch date,
-      development clearly continues to make progress.
+      Another mini teaser focused on tennis. Developers shared that the tennis interface is coming together nicely, with one team member saying the UI is going to be &ldquo;sick.&rdquo;
     </p>
-
-    <div class="tag-row">
+    <p>
+      While there still isn&rsquo;t an official launch date, development clearly continues to make progress.
+    </p>
+    <div class="tags">
       <span class="tag">Tennis</span>
       <span class="tag">UI</span>
     </div>
   </section>
 
   <section class="thought">
-    <h2 class="thought-head">Audit Logs Are Coming</h2>
-
+    <h2>Audit Logs Are Coming</h2>
     <p>
-      Moderation tools are also receiving an upgrade.
-      Audit Logs will allow moderators to review administrative activity in one place,
-      including timeouts, kicks, bans, unbans, permission changes, and group updates.
+      Moderation tools are also receiving an upgrade. Audit Logs will allow moderators to review administrative activity in one place, including timeouts, kicks, bans, unbans, permission changes, and group updates.
+    </p>
+    <p>
       For larger communities, this should make tracking moderation history much easier.
     </p>
-
-    <div class="tag-row">
+    <div class="tags">
       <span class="tag">Audit Logs</span>
       <span class="tag">Moderation</span>
     </div>
   </section>
 
   <section class="thought">
-    <h2 class="thought-head">Advanced Stats Are Coming to Mobile</h2>
-
+    <h2>Advanced Stats Are Coming to Mobile</h2>
     <p>
-      One of the web app's most useful features is finally making its way to mobile.
-      Advanced situational statistics that currently appear above the at-bat screen
-      on web will soon be available in the mobile app, giving users more relevant
-      information while following live games.
+      One of the web app&rsquo;s most useful features is finally making its way to mobile. Advanced situational statistics that currently appear above the at-bat screen on web will soon be available in the mobile app, giving users more relevant information while following live games.
     </p>
-
-    <div class="tag-row">
+    <div class="tags">
       <span class="tag">Advanced Stats</span>
       <span class="tag">Mobile</span>
     </div>
   </section>
 
   <section class="thought">
-    <h2 class="thought-head">Folders and Better Organization</h2>
-
+    <h2>Folders and Better Organization</h2>
     <p>
-      Collection management is getting a significant quality-of-life improvement.
-      The ability to drag groups, reorder them, and combine multiple groups into folders,
-      which already exists on web, is also coming to mobile.
-      Users with larger collections should find organizing cards much easier.
+      Collection management is getting a significant quality-of-life improvement. The ability to drag groups, reorder them, and combine multiple groups into folders, which already exists on web, is also coming to mobile.
     </p>
-
-    <div class="tag-row">
-      <span class="tag">Collections</span>
+    <p>
+      Users with larger collections should find organizing cards much easier once this arrives.
+    </p>
+    <div class="tags">
+      <span class="tag">Collection</span>
       <span class="tag">Folders</span>
     </div>
   </section>
 
   <section class="thought">
-    <h2 class="thought-head">Quick List Makes the Jump to Mobile</h2>
-
+    <h2>Quick List Is Also on the Way</h2>
     <p>
-      Quick List is also on its way.
-      After opening a pack, users will soon be able to quickly list cards directly
-      from the pack-opening screen, making it faster to get new pulls onto the marketplace.
+      Quick List is another feature expected to make the jump to mobile. The addition should make it easier to manage cards directly from the collection experience without having to go through as many separate steps.
     </p>
-
-    <div class="tag-row">
+    <div class="tags">
       <span class="tag">Quick List</span>
-      <span class="tag">Marketplace</span>
+      <span class="tag">Mobile</span>
     </div>
   </section>
 
   <section class="thought">
-    <h2 class="thought-head">Bigger Picture</h2>
-
+    <h2>More Web Features Are Making the Jump</h2>
     <p>
-      Rather than focusing on one headline feature, this update appears centered around
-      bringing the mobile app much closer to the web experience. Better notifications,
-      advanced stats, collection folders, Quick List, and improved moderation tools all
-      point toward a more polished app.
+      Taken together, the teasers show a broader push to bring the web experience closer to mobile. Notification controls, organization tools, advanced stats, audit logs, Quick List, tennis, and the upcoming replacement for the map are all part of a much larger mobile-focused update.
     </p>
-
     <p>
-      The biggest unknown remains the feature set to replace the current map.
-      If it delivers on what developers have hinted at, it could become one of the
-      biggest gameplay additions Real has introduced.
+      There is still no single confirmed release date for every feature listed here, but the development updates make it clear that the next mobile release is becoming a substantial one.
     </p>
-
-    <div class="tag-row">
+    <div class="tags">
       <span class="tag">Mobile Update</span>
-      <span class="tag">Future</span>
+      <span class="tag">Web to Mobile</span>
     </div>
   </section>
 
-  <div class="sign-off">
-    Based on developer comments and previews shared with the community.<br>
-    Features discussed are subject to change before release.
-  </div>
+  <a class="back" href="index.html">&larr; Back to Insider Reports</a>
 
-</article>
+</main>
+
+</body>
+</html>
