@@ -1,214 +1,257 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inside Real’s October 17 Update — Insider Reports</title>
-  <meta name="description" content="A look at Real's October 17 update, including Real Bot, Arena, the new 18+ age requirement, and more.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inside Real’s October 17 Update &mdash; Insider Reports</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500&display=swap');
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@400;600;700&family=Source+Serif+4:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+:root {
+  --bg: #FFFFFF;
+  --panel: #FAFAFA;
+  --line: #E3E3E3;
+  --pink: #E00067;
+  --text: #111113;
+  --muted: #7A7A82;
+  --body: #3A3A40;
+}
 
-  <style>
-    :root {
-      --bg: #0b0b0d;
-      --surface: #141417;
-      --text: #f4f1f3;
-      --muted: #a6a0a6;
-      --accent: #ff4fa3;
-      --border: #29262c;
-    }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    * {
-      box-sizing: border-box;
-    }
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Source Serif 4', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Source Serif 4", serif;
-      line-height: 1.7;
-    }
+a { color: inherit; text-decoration: none; }
 
-    header {
-      padding: 20px;
-      border-bottom: 1px solid var(--border);
-    }
+.chrome {
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
 
-    .nav {
-      max-width: 850px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
+.chrome-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
 
-    .brand {
-      color: var(--text);
-      text-decoration: none;
-      font-family: "Archivo Expanded", sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-    }
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 0 0 rgba(224,0,103,0.6);
+  animation: pulse 1.8s infinite;
+}
 
-    .back {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 13px;
-    }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(224,0,103,0.45); }
+  70% { box-shadow: 0 0 0 7px rgba(224,0,103,0); }
+  100% { box-shadow: 0 0 0 0 rgba(224,0,103,0); }
+}
 
-    .back:hover {
-      color: var(--accent);
-    }
+.tabs {
+  padding: 0 20px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
 
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 44px 22px 70px;
-    }
+.tabs a { color: var(--pink); }
 
-    .eyebrow {
-      color: var(--accent);
-      font-family: "JetBrains Mono", monospace;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
+.article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 24px 100px;
+}
 
-    h1, h2 {
-      font-family: "Archivo Expanded", sans-serif;
-      line-height: 1.3;
-    }
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--pink);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
 
-    h1 {
-      font-size: clamp(25px, 5vw, 38px);
-      margin: 12px 0;
-    }
+h1 {
+  font-family: 'Archivo Expanded', sans-serif;
+  font-weight: 800;
+  font-size: clamp(34px, 6vw, 50px);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+}
 
-    .date {
-      color: var(--muted);
-      font-family: "JetBrains Mono", monospace;
-      font-size: 11px;
-      margin-bottom: 28px;
-    }
+.lede {
+  margin-top: 30px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--line);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--body);
+}
 
-    .intro {
-      font-size: 17px;
-      color: #ded9df;
-    }
+.thought {
+  padding: 38px 0;
+  border-bottom: 1px solid var(--line);
+}
 
-    h2 {
-      font-size: 17px;
-      margin: 30px 0 8px;
-    }
+.thought h2 {
+  font-family: 'Archivo Expanded', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
 
-    p {
-      margin: 8px 0 14px;
-      font-size: 15px;
-    }
+.thought p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--body);
+  margin-bottom: 18px;
+}
 
-    .age {
-      color: var(--accent);
-    }
+.thought p:last-child { margin-bottom: 0; }
 
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 22px;
-      text-align: center;
-      color: var(--muted);
-      font-family: "JetBrains Mono", monospace;
-      font-size: 10px;
-    }
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
 
-    @media (max-width: 480px) {
-      main {
-        padding-top: 30px;
-      }
+.tag {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
 
-      .intro {
-        font-size: 16px;
-      }
-
-      p {
-        font-size: 14px;
-      }
-    }
-  </style>
+.back {
+  display: inline-block;
+  margin-top: 30px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--pink);
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="nav">
-      <a class="brand" href="index.html">INSIDER REPORTS</a>
-      <a class="back" href="index.html">← All Reports</a>
-    </div>
-  </header>
 
-  <main>
-    <div class="eyebrow">Update Breakdown</div>
+<div class="chrome">
+  <div class="chrome-top">
+    <span class="live-dot"></span>
+    <span>INSIDER REPORT &middot; REAL</span>
+  </div>
+  <div class="tabs">
+    <a href="index.html">ALL</a>
+  </div>
+</div>
 
-    <h1>Inside Real’s October 17 Update</h1>
+<main class="article">
 
-    <div class="date">OCTOBER 18, 2026</div>
+  <div class="eyebrow">An Insider&rsquo;s Take</div>
 
-    <p class="intro">
-      The latest update brings Real Bot, Arena, a change to Real’s age
-      requirement, and several smaller improvements across the platform.
-    </p>
+  <h1>Inside Real&rsquo;s October 17 Update</h1>
 
-    <h2 class="age">Age Requirement Changes 👀</h2>
+  <div class="lede">
+    The latest update brings Real Bot, Arena, a change to Real&rsquo;s listed age requirement, and several smaller improvements across the platform.
+  </div>
+
+  <section class="thought">
+    <h2>Age Requirement Changes</h2>
     <p>
-      Real has changed its listed age requirement from 13+ to 18+.
+      Real has changed its listed age requirement from 13+ to 18+. The change is reflected in the platform&rsquo;s listed age guidance; the details of how access is handled are not confirmed here.
     </p>
+    <div class="tags">
+      <span class="tag">Platform</span>
+      <span class="tag">Age Requirement</span>
+    </div>
+  </section>
 
+  <section class="thought">
     <h2>Real Bot</h2>
     <p>
-      Formerly known as Scout, Real Bot now has a full-screen experience
-      for asking questions about players, teams, games, awards, standings,
-      polls, and drafts. It supports all sports, with saved conversations
-      and shareable answers.
+      Formerly known as Scout, Real Bot now has a full-screen experience for asking questions about players, teams, games, awards, standings, polls, and drafts.
     </p>
+    <p>
+      It supports all sports, with saved conversations and shareable answers, giving users a more flexible way to explore sports information directly in Real.
+    </p>
+    <div class="tags">
+      <span class="tag">Real Bot</span>
+      <span class="tag">AI</span>
+    </div>
+  </section>
 
+  <section class="thought">
     <h2>Arena</h2>
     <p>
-      Arena is a new head-to-head game built around users’ player
-      collections. The Pro-only beta currently supports college football
-      and the NFL, with more sports planned.
+      Arena is a Pro-only beta that lets users compete head-to-head using players from their collections. The initial experience focuses on college football and the NFL, with more sports planned.
     </p>
+    <div class="tags">
+      <span class="tag">Arena</span>
+      <span class="tag">Pro</span>
+      <span class="tag">Beta</span>
+    </div>
+  </section>
 
-    <h2>Navigation Redesign</h2>
+  <section class="thought">
+    <h2>Navigation and Search Improvements</h2>
     <p>
-      Navigation and search have been redesigned across mobile and web,
-      including floating mobile navigation, improved search, a live rail,
-      and a new split-view game experience.
+      The update brings navigation changes across mobile and web, including floating navigation on mobile, improved search, a live rail, and a split-view game experience.
     </p>
+    <div class="tags">
+      <span class="tag">Navigation</span>
+      <span class="tag">Search</span>
+      <span class="tag">Mobile</span>
+    </div>
+  </section>
 
-    <h2>Other Updates</h2>
+  <section class="thought">
+    <h2>More Improvements Across Real</h2>
     <p>
-      The update adds a new pack-opening animation, brings back booster
-      animations, shows projected Rax earnings, and improves profile
-      sharing, marketplace filters, and home-screen customization.
+      Other changes include pack-opening and booster animations, projected Rax earnings, profile sharing, marketplace filters, and home-screen customization.
     </p>
-
     <p>
-      Other additions include NFL injury statuses in player box scores,
-      team schedule viewing options, the NBA Rookie Ladder, and NHL
-      features such as stoppage tracking, fight-winner voting, and
-      Three Stars after games. Performance improvements and critical
-      bug fixes round out the update.
+      Sports-specific additions include NFL injury statuses, team schedule viewing options, an NBA Rookie Ladder, NHL stoppage tracking, fight-winner voting, and Three Stars after games. The update also includes performance improvements and bug fixes.
     </p>
+    <div class="tags">
+      <span class="tag">Marketplace</span>
+      <span class="tag">Sports Updates</span>
+      <span class="tag">Quality of Life</span>
+    </div>
+  </section>
 
+  <section class="thought">
+    <h2>The Bigger Picture</h2>
     <p>
-      <strong>Real Bot, Arena, and the updated age requirement</strong>
-      are among the biggest changes in this release.
+      Real Bot and Arena are two of the biggest additions in this update, while the navigation changes and smaller improvements touch more of the everyday experience.
     </p>
-  </main>
+    <p>
+      The listed age requirement has also changed to 18+, making it another notable part of this release.
+    </p>
+    <div class="tags">
+      <span class="tag">October Update</span>
+      <span class="tag">Real</span>
+    </div>
+  </section>
 
-  <footer>
-    INDEPENDENT COVERAGE · INSIDER REPORTS
-  </footer>
+  <a class="back" href="index.html">&larr; Back to Insider Reports</a>
+
+</main>
+
 </body>
 </html>
